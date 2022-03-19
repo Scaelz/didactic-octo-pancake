@@ -4,6 +4,15 @@ const designs = document.querySelectorAll('.design-images');
 const designImages = document.querySelectorAll('.design-block__img');
 const titles = document.querySelectorAll('.design__title');
 
+for(let i = 0; i <= tabsButtons.length; i++) {
+    const button = tabsButtons[i];
+    const active = button.classList.contains('design-list__item_active');
+    if (active) {
+        document.title = button.innerText;
+        break;
+    }
+}
+
 const updateTabFieldsVisibility = (fieldsArray, data) => {
     let currentlyVisible;
     fieldsArray.forEach(field => {
