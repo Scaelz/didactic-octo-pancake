@@ -31,6 +31,6 @@ const updateTimer = () => {
         timer.textContent = `00:00:00:00`;
     }
 }
-
+updateTimer();
 const interval = setInterval(updateTimer, 500);
 
