@@ -24,11 +24,11 @@ const updateTimer = () => {
     minutes = formatTimeUnit(minutes);
     hours = formatTimeUnit(hours);
     days = formatTimeUnit(days);
-    timer.textContent = `${days}:${hours}:${minutes}:${seconds}`;
+    timer.textContent = `${days}д ${hours}:${minutes}:${seconds}`;
 
     if (timeLeftInSeconds < 0) {
         clearInterval(interval);
-        timer.textContent = `00:00:00:00`;
+        timer.textContent = `00:00:00`;
     }
 }
 updateTimer();
