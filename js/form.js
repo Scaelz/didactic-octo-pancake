@@ -24,6 +24,9 @@ forms.forEach(form => {
             })
             .then((json) => alert('Данные отправлены успешно'))
             .catch((error) => alert(`Данные отправлены с ошибкой - ${error.message}`))
-            .finally(form.reset());
+            .finally(() => {
+                modal.classList.add('hidden');
+                form.reset();
+            });
     })
 })
